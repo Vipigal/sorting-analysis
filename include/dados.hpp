@@ -15,5 +15,8 @@ struct Item{
 };
 
 //TODO: Funcoes preenche cadeia, numeros e chave
+void preencheVetor(Item* v, int N);
+std::string geraString(int size);
+
 
 #endif
