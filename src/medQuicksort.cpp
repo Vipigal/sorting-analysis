@@ -1,9 +1,3 @@
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <algorithm>
-#include <iostream>
-
 #include "medQuicksort.hpp"
 
 //insertionSort

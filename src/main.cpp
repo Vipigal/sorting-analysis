@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "recQuicksort.hpp"
 #include "medQuicksort.hpp"
 #include "selQuicksort.hpp"
@@ -45,15 +46,42 @@ int main(int argc, const char** argv) {
 		}
 	}
 	//TODO: TESTAR SE AS FLAGS SAO VALIDAS:
-	//erroAssert()
-	//awdawd
+	std::ifstream input(nomeArquivoEntrada);
+	erroAssert(input,"Nao foi possivel abrir o arquivo de input! Favor inserir entrada valida com a flag -i");
+	//erroAssert(nomeArquivoSaida,"QDSq");
+	erroAssert(versaoQs>=1&&versaoQs<=5,"Por favor insira uma versao valida para teste do quicksort (1, 2, 3, 4 ou 5)");
+	erroAssert(seed, "Por favor inserir seed de aleatoriedade valida com a flag -s");
 
-	int N = 15;
+	//erroAssert()
+
+
+	int N = 1000000;
 	Item* registros = new Item[N];
 	preencheVetor(registros, N);
+
+	/* 
+	descomentar para analisar vetor nao ordenado:
 	printItemKey(registros, N);
 	std::cout << std::endl;
-	medQuickSort(registros, N, 5);
+	*/
+
+	switch (versaoQs){
+	case 1:
+		recQuickSort(registros,N);
+		break;
+	case 2:
+		medQuickSort(registros,N,numeroMedianas);
+		break;
+	case 3:
+		selQuickSort(registros,N,numeroParticoes);
+		break;
+	case 4:
+		//TODO: QS NAO RECURSIVO
+		break;
+	case 5:
+		//TODO: QS EMPILHA INTELIGENTE
+		break;	
+	}
 	printItemKey(registros, N);
 
 
