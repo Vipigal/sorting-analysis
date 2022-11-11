@@ -18,7 +18,8 @@ std::string geraString(int size){
     return random_string;
 }
 
-void preencheVetor(Item* v, int N){
+void preencheVetor(Item* v, int N, int seed){
+	srand(seed);
 	for(int i=0;i<N;i++){
 		v[i].chave=rand()%N;
 		for(int j=0;j<15;j++){

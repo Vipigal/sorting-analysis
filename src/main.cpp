@@ -46,18 +46,18 @@ int main(int argc, const char** argv) {
 		}
 	}
 	//TODO: TESTAR SE AS FLAGS SAO VALIDAS:
-	std::ifstream input(nomeArquivoEntrada);
-	erroAssert(input,"Nao foi possivel abrir o arquivo de input! Favor inserir entrada valida com a flag -i");
-	//erroAssert(nomeArquivoSaida,"QDSq");
+	//std::ifstream input(nomeArquivoEntrada);
+	// erroAssert(input,"Nao foi possivel abrir o arquivo de input! Favor inserir entrada valida com a flag -i");
+	// erroAssert(nomeArquivoSaida,"QDSq");
 	erroAssert(versaoQs>=1&&versaoQs<=5,"Por favor insira uma versao valida para teste do quicksort (1, 2, 3, 4 ou 5)");
 	erroAssert(seed, "Por favor inserir seed de aleatoriedade valida com a flag -s");
 
 	//erroAssert()
 
 
-	int N = 1000000;
+	int N = 15;
 	Item* registros = new Item[N];
-	preencheVetor(registros, N);
+	preencheVetor(registros, N, seed);
 
 	/* 
 	descomentar para analisar vetor nao ordenado:
@@ -70,9 +70,11 @@ int main(int argc, const char** argv) {
 		recQuickSort(registros,N);
 		break;
 	case 2:
+		erroAssert(numeroMedianas>0,"Ao utilizar a versao de medianas do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -k!");
 		medQuickSort(registros,N,numeroMedianas);
 		break;
 	case 3:
+		erroAssert(numeroParticoes>0,"Ao utilizar a versao de selecao do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -m!");
 		selQuickSort(registros,N,numeroParticoes);
 		break;
 	case 4:
