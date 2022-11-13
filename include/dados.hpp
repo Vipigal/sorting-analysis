@@ -5,7 +5,7 @@
 #include <iostream>
 
 extern int comparacoes;
-extern int trocas;
+extern int copias;
 
 //esse Item representa um registro de memoria
 struct Item{
@@ -22,6 +22,7 @@ struct Item{
 
 //TODO: Funcoes preenche cadeia, numeros e chave
 void preencheVetor(Item* v, int N, int seed);
+void preencheVetorHeap(Item* v, int N, int seed);
 std::string geraString(int size);
 
 

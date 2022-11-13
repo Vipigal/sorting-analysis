@@ -13,7 +13,7 @@ void selectionSort (Item *v, int Esq, int Dir){
 			comparacoes++;
 		}
 		Troca(v[i], v[Min]);
-		trocas++;
+		copias+=3;
 	}
 }
 
@@ -25,14 +25,19 @@ void sParticao(int Esq, int Dir, int *i, int *j, Item *A){
 	x = A[(*i + *j)/2]; /* obtem o pivo x */
 	do
 	{
-		while (x.chave > A[*i].chave) (*i)++;
-		while (x.chave < A[*j].chave) (*j)--;
+		while (x.chave > A[*i].chave){
+			comparacoes++;
+			(*i)++;
+		} comparacoes++;
+		while (x.chave < A[*j].chave){
+			comparacoes++;
+			(*j)--;
+		} comparacoes++;
 		if (*i <= *j){
 			w = A[*i]; A[*i] = A[*j]; A[*j] = w;
 			(*i)++; (*j)--;
-			trocas++;
+			copias+=3;
 		}
-		comparacoes++;
 	} while (*i <= *j);
 }
 
@@ -41,24 +46,20 @@ void sOrdena(int Esq, int Dir, Item *A, int m){
 	int size = Dir-Esq;
 	if(size<=m){
 		selectionSort(A, Esq, Dir);
-		comparacoes++;
 		return;
 	}
-	comparacoes++;
 
 	sParticao(Esq, Dir, &i, &j, A);
 	if (Esq < j) sOrdena(Esq, j, A, m);
-	comparacoes++;
 	if (i < Dir) sOrdena(i, Dir, A, m);
-	comparacoes++;
 }
 
 void selQuickSort(Item *A, int n, int m){
 	sOrdena(0, n-1, A, m);
 	std::cout << "comparacoes: " <<comparacoes<< std::endl;
-	std::cout << "trocas: " <<trocas<< std::endl;
+	std::cout << "copias: " <<copias<< std::endl;
 	comparacoes=0;
-	trocas=0;
+	copias=0;
 }
 
 
