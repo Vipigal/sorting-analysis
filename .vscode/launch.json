@@ -8,7 +8,7 @@
 			"name": "(gdb) Iniciar",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/tests/a.out",
+			"program": "${workspaceFolder}/bin/quicksort",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${fileDirname}",

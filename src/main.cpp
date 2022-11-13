@@ -3,8 +3,12 @@
 #include "recQuicksort.hpp"
 #include "medQuicksort.hpp"
 #include "selQuicksort.hpp"
+#include "pileQuicksort.hpp"
 #include "msgassert.h"
 #include "dados.hpp"
+
+int comparacoes=0;
+int trocas=0;
 
 
 void printItemKey(Item* v, int n){
@@ -49,13 +53,16 @@ int main(int argc, const char** argv) {
 	//std::ifstream input(nomeArquivoEntrada);
 	// erroAssert(input,"Nao foi possivel abrir o arquivo de input! Favor inserir entrada valida com a flag -i");
 	// erroAssert(nomeArquivoSaida,"QDSq");
+	// seed=10;
+	// versaoQs=4;
 	erroAssert(versaoQs>=1&&versaoQs<=5,"Por favor insira uma versao valida para teste do quicksort (1, 2, 3, 4 ou 5)");
 	erroAssert(seed, "Por favor inserir seed de aleatoriedade valida com a flag -s");
+	
 
 	//erroAssert()
 
 
-	int N = 15;
+	int N = 20;
 	Item* registros = new Item[N];
 	preencheVetor(registros, N, seed);
 
@@ -78,7 +85,7 @@ int main(int argc, const char** argv) {
 		selQuickSort(registros,N,numeroParticoes);
 		break;
 	case 4:
-		//TODO: QS NAO RECURSIVO
+		pileQuickSort(registros, N);
 		break;
 	case 5:
 		//TODO: QS EMPILHA INTELIGENTE

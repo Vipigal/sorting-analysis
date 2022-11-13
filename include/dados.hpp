@@ -2,6 +2,10 @@
 #define DADOS_H
 
 #include <string>
+#include <iostream>
+
+extern int comparacoes;
+extern int trocas;
 
 //esse Item representa um registro de memoria
 struct Item{
@@ -11,6 +15,8 @@ struct Item{
 	std::string cadeias[15];
 	//10 numeros reais
 	double numeros[10];
+
+	int dir, esq;
 
 };
 
