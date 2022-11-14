@@ -16,9 +16,9 @@ OBJ = obj
 INC = include
 BIN = bin
 #ADICIONAR NOS OBJETOS O QUE DEVE SER RASTREADO DE MUDANCA:
-OBJS = $(OBJ)/recQuicksort.o $(OBJ)/heapsort.o $(OBJ)/stackQuicksort.o $(OBJ)/medQuicksort.o $(OBJ)/pileQuicksort.o $(OBJ)/selQuicksort.o $(OBJ)/dados.o $(OBJ)/main.o
+OBJS = $(OBJ)/recQuicksort.o $(OBJ)/mergesort.o $(OBJ)/heapsort.o $(OBJ)/stackQuicksort.o $(OBJ)/medQuicksort.o $(OBJ)/pileQuicksort.o $(OBJ)/selQuicksort.o $(OBJ)/dados.o $(OBJ)/main.o
 #ADICIONAR NOS HEADERS OS INCLUDES NECESSARIOS PARA COMPILACAO:
-HDRS = $(INC)/recQuicksort.hpp $(INC)/selQuicksort.hpp $(INC)/stackQuicksort.hpp $(INC)/pileQuicksort.hpp $(INC)/heapsort.hpp $(INC)/medQuicksort.hpp $(INC)/dados.hpp $(INC)/msgassert.h
+HDRS = $(INC)/recQuicksort.hpp $(INC)/selQuicksort.hpp $(INC)/mergesort.hpp $(INC)/stackQuicksort.hpp $(INC)/pileQuicksort.hpp $(INC)/heapsort.hpp $(INC)/medQuicksort.hpp $(INC)/dados.hpp $(INC)/msgassert.h
 CPFLAGS = -Wall -c -I$(INC)
 CXXFLAGS = -std=c++11 -g -Wall
 
@@ -43,6 +43,9 @@ $(OBJ)/recQuicksort.o: $(HDRS) $(SRC)/recQuicksort.cpp
 
 $(OBJ)/heapsort.o: $(HDRS) $(SRC)/heapsort.cpp
 	$(CPP) $(CPFLAGS) -o $(OBJ)/heapsort.o $(SRC)/heapsort.cpp
+
+$(OBJ)/mergesort.o: $(HDRS) $(SRC)/mergesort.cpp
+	$(CPP) $(CPFLAGS) -o $(OBJ)/mergesort.o $(SRC)/mergesort.cpp
 
 $(OBJ)/stackQuicksort.o: $(HDRS) $(SRC)/stackQuicksort.cpp
 	$(CPP) $(CPFLAGS) -o $(OBJ)/stackQuicksort.o $(SRC)/stackQuicksort.cpp

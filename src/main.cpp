@@ -6,6 +6,7 @@
 #include "pileQuicksort.hpp"
 #include "stackQuicksort.hpp"
 #include "heapsort.hpp"
+#include "mergesort.hpp"
 #include "msgassert.h"
 #include "dados.hpp"
 
@@ -84,7 +85,7 @@ int main(int argc, const char** argv) {
 	erroAssert(input,"Nao foi possivel abrir o arquivo de input! Favor inserir entrada valida com a flag -i");
 	std:: ofstream output(nomeArquivoSaida, std::ios_base::app);
 	erroAssert(output,"Nao foi possivel abrir o arquivo de output! Favor inserir entrada valida com a flag -o");
-	erroAssert(versaoQs>=1&&versaoQs<=6,"Por favor insira uma versao valida para teste do quicksort (1, 2, 3, 4 ou 5)");
+	erroAssert(versaoQs>=1&&versaoQs<=7,"Por favor insira uma versao valida para teste do quicksort (1, 2, 3, 4 ou 5)");
 	erroAssert(seed, "Por favor inserir seed de aleatoriedade valida com a flag -s");
 	
 	//Inicializa as variaveis para leitura do input
@@ -135,10 +136,13 @@ int main(int argc, const char** argv) {
 				printarDesempenhoNaSaida(output,versaoQs,tamanhoRegistro);
 				break;
 			case 6:
-				Heapsort(registros, tamanhoRegistro);
+				heapSort(registros, tamanhoRegistro);
 				//heap vai de 1-N
 				printHeapItemKey(registros, tamanhoRegistro+1);
-				break;	
+				break;
+			case 7: 
+				mergeSort(registros,0,tamanhoRegistro-1);
+				printarDesempenhoNaSaida(output,7,tamanhoRegistro);
 			}
 		delete[] registros;
 

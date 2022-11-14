@@ -36,7 +36,7 @@ void Constroi(Item *A, int n){
 	}
 }
 
-void Heapsort(Item *A, int n){
+void heapSort(Item *A, int n){
 	//todo: adaptar para calcular com index 0
 	int Esq, Dir;
 	Item x;

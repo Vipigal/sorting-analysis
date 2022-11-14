@@ -1,12 +1,3 @@
-Versao 1: Registros: 1000 Comparacoes: 12506 Copias: 7989
-Versao 1: Registros: 5000 Comparacoes: 79295 Copias: 48753
-Versao 1: Registros: 10000 Comparacoes: 176600 Copias: 103962
-Versao 1: Registros: 1000 Comparacoes: 12506 Copias: 7989
-Versao 1: Registros: 5000 Comparacoes: 79295 Copias: 48753
-Versao 1: Registros: 10000 Comparacoes: 176600 Copias: 103962
-Versao 2: Registros: 1000k: 3 Comparacoes: 7610 Copias: 12834
-Versao 2: Registros: 5000k: 3 Comparacoes: 44612 Copias: 72229
-Versao 2: Registros: 10000k: 3 Comparacoes: 98235 Copias: 151301
 Versao 3: Registros: 1000 m: 100 Comparacoes: 38754 Copias: 5763
 Versao 3: Registros: 5000 m: 100 Comparacoes: 206546 Copias: 37173
 Versao 3: Registros: 10000 m: 100 Comparacoes: 433573 Copias: 80844

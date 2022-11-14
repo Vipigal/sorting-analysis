@@ -5,7 +5,7 @@
 
 void Refaz(int Esq, int Dir, Item *A);
 void Constroi(Item *A, int n);
-void Heapsort(Item *A, int n);
+void heapSort(Item *A, int n);
 
 
 #endif // !
