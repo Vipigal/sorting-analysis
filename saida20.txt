@@ -1,3 +1,9 @@
 Versao 1:  Comparacoes: 13315 Copias: 8103
 Versao 1:  Comparacoes: 78722 Copias: 48396
 Versao 1:  Comparacoes: 167359 Copias: 104823
+Versao 2:  Comparacoes: 7408 Copias: 12722
+Versao 2:  Comparacoes: 48795 Copias: 71644
+Versao 2:  Comparacoes: 103432 Copias: 150145
+Versao 2: k: 5 Comparacoes: 8533 Copias: 15319
+Versao 2: k: 5 Comparacoes: 49155 Copias: 85833
+Versao 2: k: 5 Comparacoes: 108702 Copias: 178219

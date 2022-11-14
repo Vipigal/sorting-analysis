@@ -35,6 +35,4 @@ void pileQuickSort(Item* A, int n){
 			esq = item.esq;
 		}
  	} while (!pilha->vazia());
-
-	printaCusto();
 }

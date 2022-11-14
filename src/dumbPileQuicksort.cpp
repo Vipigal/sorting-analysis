@@ -50,6 +50,4 @@ void iterativeQsort(Item* A, int n) {
 		pilha->empilhaInt(start);
 		pilha->empilhaInt(p);
     }
-
-	printaCusto();
 }

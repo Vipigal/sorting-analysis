@@ -56,10 +56,6 @@ void sOrdena(int Esq, int Dir, Item *A, int m){
 
 void selQuickSort(Item *A, int n, int m){
 	sOrdena(0, n-1, A, m);
-	std::cout << "comparacoes: " <<comparacoes<< std::endl;
-	std::cout << "copias: " <<copias<< std::endl;
-	comparacoes=0;
-	copias=0;
 }
 
 

@@ -36,7 +36,7 @@ $(BIN)/quicksort: $(OBJS)
 # Formulas para os objetos:
 
 $(OBJ)/main.o: $(HDRS) $(SRC)/main.cpp
-	$(CPP) $(CPFLAGS) -o $(OBJ)/main.o $(SRC)/main.cpp -g
+	$(CPP) $(CPFLAGS) -o $(OBJ)/main.o $(SRC)/main.cpp
 
 $(OBJ)/recQuicksort.o: $(HDRS) $(SRC)/recQuicksort.cpp
 	$(CPP) $(CPFLAGS) -o $(OBJ)/recQuicksort.o $(SRC)/recQuicksort.cpp
@@ -54,10 +54,10 @@ $(OBJ)/selQuicksort.o: $(HDRS) $(SRC)/selQuicksort.cpp
 	$(CPP) $(CPFLAGS) -o $(OBJ)/selQuicksort.o $(SRC)/selQuicksort.cpp
 
 $(OBJ)/pileQuicksort.o: $(HDRS) $(SRC)/pileQuicksort.cpp
-	$(CPP) $(CPFLAGS) -o $(OBJ)/pileQuicksort.o $(SRC)/pileQuicksort.cpp -g
+	$(CPP) $(CPFLAGS) -o $(OBJ)/pileQuicksort.o $(SRC)/pileQuicksort.cpp
 	
 $(OBJ)/dados.o: $(HDRS) $(SRC)/dados.cpp
-	$(CPP) $(CPFLAGS) -o $(OBJ)/dados.o $(SRC)/dados.cpp -g
+	$(CPP) $(CPFLAGS) -o $(OBJ)/dados.o $(SRC)/dados.cpp
 
 	
 	
