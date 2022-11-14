@@ -1,3 +1,30 @@
-Versao 3: Registros: 1000 m: 100 Comparacoes: 38754 Copias: 5763
-Versao 3: Registros: 5000 m: 100 Comparacoes: 206546 Copias: 37173
-Versao 3: Registros: 10000 m: 100 Comparacoes: 433573 Copias: 80844
+Versao 1: Registros: 1000 Comparacoes: 12506 Copias: 7989 Tempo: 2ms
+Versao 1: Registros: 1000 Comparacoes: 12330 Copias: 8187 Tempo: 2ms
+Versao 1: Registros: 1000 Comparacoes: 13399 Copias: 8013 Tempo: 2ms
+Versao 1: Registros: 1000 Comparacoes: 13708 Copias: 7917 Tempo: 2ms
+Versao 1: Registros: 1000 Comparacoes: 12265 Copias: 8208 Tempo: 2ms
+Versao 1: Registros: 5000 Comparacoes: 86875 Copias: 48021 Tempo: 14ms
+Versao 1: Registros: 5000 Comparacoes: 82438 Copias: 48096 Tempo: 14ms
+Versao 1: Registros: 5000 Comparacoes: 83097 Copias: 48231 Tempo: 15ms
+Versao 1: Registros: 5000 Comparacoes: 76591 Copias: 48603 Tempo: 14ms
+Versao 1: Registros: 5000 Comparacoes: 79239 Copias: 48675 Tempo: 15ms
+Versao 1: Registros: 10000 Comparacoes: 167359 Copias: 104823 Tempo: 31ms
+Versao 1: Registros: 10000 Comparacoes: 177977 Copias: 103620 Tempo: 31ms
+Versao 1: Registros: 10000 Comparacoes: 185924 Copias: 101802 Tempo: 30ms
+Versao 1: Registros: 10000 Comparacoes: 180105 Copias: 102990 Tempo: 31ms
+Versao 1: Registros: 10000 Comparacoes: 176001 Copias: 104739 Tempo: 32ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7610 Copias: 12834 Tempo: 2ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7806 Copias: 12585 Tempo: 3ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7933 Copias: 12728 Tempo: 2ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7558 Copias: 12765 Tempo: 2ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7388 Copias: 12693 Tempo: 2ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 46347 Copias: 71835 Tempo: 19ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 45975 Copias: 72013 Tempo: 18ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 49146 Copias: 71748 Tempo: 17ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 47679 Copias: 71644 Tempo: 17ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 47588 Copias: 71462 Tempo: 17ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 103432 Copias: 150145 Tempo: 39ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 101962 Copias: 150369 Tempo: 38ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 106494 Copias: 150553 Tempo: 37ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 97884 Copias: 151507 Tempo: 39ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 106347 Copias: 150313 Tempo: 39ms
