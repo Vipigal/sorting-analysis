@@ -4,7 +4,7 @@
 #include "medQuicksort.hpp"
 #include "selQuicksort.hpp"
 #include "pileQuicksort.hpp"
-#include "dumbPileQuicksort.hpp"
+#include "stackQuicksort.hpp"
 #include "heapsort.hpp"
 #include "msgassert.h"
 #include "dados.hpp"
@@ -21,18 +21,18 @@ void printItemKey(Item* v, int n){
 	}
 }
 
-void printarDesempenhoNaSaida(std::ofstream &output, int versao, int numMedianas=0, int numParticoes=0){
+void printarDesempenhoNaSaida(std::ofstream &output, int versao, int registros, int numMedianas=0, int numParticoes=0){
 	switch (versao)
 	{
 	case 2:
-		output<<"Versao "<<versao<<": "<<"k: "<<numMedianas<<" "<<"Comparacoes: "<<comparacoes<<" "<<"Copias: "<<copias<<std::endl;
+		output<<"Versao "<<versao<<": "<<"Registros: "<<registros<<" k: "<<numMedianas<<" Comparacoes: "<<comparacoes<<" Copias: "<<copias<<std::endl;
 		break;
 	case 3:
-		output<<"Versao "<<versao<<": "<<"m: "<<numParticoes<<" "<<"Comparacoes: "<<comparacoes<<" "<<"Copias: "<<copias<<std::endl;
+		output<<"Versao "<<versao<<": "<<"Registros: "<<registros<<" m: "<<numParticoes<<" "<<"Comparacoes: "<<comparacoes<<" "<<"Copias: "<<copias<<std::endl;
 		break;
 	
 	default:
-		output<<"Versao "<<versao<<": "<<" "<<"Comparacoes: "<<comparacoes<<" "<<"Copias: "<<copias<<std::endl;
+		output<<"Versao "<<versao<<": "<<"Registros: "<<registros<<" "<<"Comparacoes: "<<comparacoes<<" "<<"Copias: "<<copias<<std::endl;
 		break;
 	}
 
@@ -114,25 +114,25 @@ int main(int argc, const char** argv) {
 		switch (versaoQs){
 			case 1:
 				recQuickSort(registros,tamanhoRegistro);
-				printarDesempenhoNaSaida(output,versaoQs);
+				printarDesempenhoNaSaida(output,versaoQs,tamanhoRegistro);
 				break;
 			case 2:
 				erroAssert(numeroMedianas>0,"Ao utilizar a versao de medianas do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -k!");
 				medQuickSort(registros,tamanhoRegistro,numeroMedianas);
-				printarDesempenhoNaSaida(output,versaoQs,numeroMedianas);
+				printarDesempenhoNaSaida(output,versaoQs,tamanhoRegistro,numeroMedianas);
 				break;
 			case 3:
 				erroAssert(numeroParticoes>0,"Ao utilizar a versao de selecao do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -m!");
 				selQuickSort(registros,tamanhoRegistro,numeroParticoes);
-				printarDesempenhoNaSaida(output,versaoQs,0,numeroParticoes);
+				printarDesempenhoNaSaida(output,versaoQs,tamanhoRegistro,0,numeroParticoes);
 				break;
 			case 4:
 				pileQuickSort(registros, tamanhoRegistro);
-				printarDesempenhoNaSaida(output,versaoQs);
+				printarDesempenhoNaSaida(output,versaoQs,tamanhoRegistro);
 				break;
 			case 5:
 				iterativeQsort(registros, tamanhoRegistro);
-				printarDesempenhoNaSaida(output,versaoQs);
+				printarDesempenhoNaSaida(output,versaoQs,tamanhoRegistro);
 				break;
 			case 6:
 				Heapsort(registros, tamanhoRegistro);
