@@ -1,6 +1,6 @@
 #include "selQuicksort.hpp"
 
-#define Troca(A, B){Item C; C=A; A=B; B=C;}
+
 
 void selectionSort (Item *v, int Esq, int Dir){
 	int i, j, Min;

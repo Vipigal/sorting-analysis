@@ -4,6 +4,7 @@
 #include "medQuicksort.hpp"
 #include "selQuicksort.hpp"
 #include "pileQuicksort.hpp"
+#include "dumbPileQuicksort.hpp"
 #include "heapsort.hpp"
 #include "msgassert.h"
 #include "dados.hpp"
@@ -18,6 +19,12 @@ void printItemKey(Item* v, int n){
 	for(int i=0;i<n;i++){
 		std::cout<<v[i].chave<<std::endl;
 	}
+}
+
+void printarDesempenhoNaSaida(std::ofstream &output, int versao){
+	output<<"Versao "<<versao<<": "<<" "<<"Comparacoes: "<<comparacoes<<" "<<"Copias: "<<copias<<std::endl;
+	comparacoes=0;
+	copias=0;
 }
 
 void printHeapItemKey(Item* v, int n){
@@ -59,31 +66,64 @@ int main(int argc, const char** argv) {
 		}
 	}
 	//TODO: TESTAR SE AS FLAGS SAO VALIDAS:
-	//std::ifstream input(nomeArquivoEntrada);
-	// erroAssert(input,"Nao foi possivel abrir o arquivo de input! Favor inserir entrada valida com a flag -i");
-	// erroAssert(nomeArquivoSaida,"QDSq");
-	// seed=10;
-	// versaoQs=5;
-	erroAssert(versaoQs>=1&&versaoQs<=5,"Por favor insira uma versao valida para teste do quicksort (1, 2, 3, 4 ou 5)");
+	std::ifstream input(nomeArquivoEntrada);
+	erroAssert(input,"Nao foi possivel abrir o arquivo de input! Favor inserir entrada valida com a flag -i");
+	std:: ofstream output(nomeArquivoSaida);
+	erroAssert(output,"Nao foi possivel abrir o arquivo de output! Favor inserir entrada valida com a flag -o");
+	erroAssert(versaoQs>=1&&versaoQs<=6,"Por favor insira uma versao valida para teste do quicksort (1, 2, 3, 4 ou 5)");
 	erroAssert(seed, "Por favor inserir seed de aleatoriedade valida com a flag -s");
 	
 
 	//erroAssert()
-
-	int N = 20;
+	int numeroTestes = 0;
+	int tamanhoRegistro = 0;
 	Item* registros;
+	input>>numeroTestes;
+	for(int i=0;i<numeroTestes;i++){
+		input>>tamanhoRegistro;
+		if(versaoQs==6){
+			//inicializa o vetor para ser ordenado por quicksort, como vai de 1-N, a posicao 0 nao eh utilizada
+			int tamanhoHeap=tamanhoRegistro+1;
+			registros = new Item[tamanhoHeap];
+			preencheVetorHeap(registros, tamanhoHeap, seed);
 
-	if(versaoQs==5){
-		//inicializa o vetor para ser ordenado por quicksort, como vai de 1-N, a posicao 0 nao eh utilizada
-		int tamanhoHeap=N+1;
-		registros = new Item[tamanhoHeap];
-		preencheVetorHeap(registros, tamanhoHeap, seed);
+		}else{
+			registros = new Item[tamanhoRegistro];
+			preencheVetor(registros, tamanhoRegistro, seed);
+		}
+		switch (versaoQs){
+			case 1:
+				recQuickSort(registros,tamanhoRegistro);
+				// printItemKey(registros, tamanhoRegistro);
+				printarDesempenhoNaSaida(output,versaoQs);
+				break;
+			case 2:
+				erroAssert(numeroMedianas>0,"Ao utilizar a versao de medianas do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -k!");
+				medQuickSort(registros,tamanhoRegistro,numeroMedianas);
+				printItemKey(registros, tamanhoRegistro);
+				break;
+			case 3:
+				erroAssert(numeroParticoes>0,"Ao utilizar a versao de selecao do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -m!");
+				selQuickSort(registros,tamanhoRegistro,numeroParticoes);
+				printItemKey(registros, tamanhoRegistro);
+				break;
+			case 4:
+				pileQuickSort(registros, tamanhoRegistro);
+				printItemKey(registros, tamanhoRegistro);
+				break;
+			case 5:
+				iterativeQsort(registros, tamanhoRegistro);
+				printItemKey(registros, tamanhoRegistro);
+				break;
+			case 6:
+				Heapsort(registros, tamanhoRegistro);
+				//heap vai de 1-N
+				printHeapItemKey(registros, tamanhoRegistro+1);
+				break;	
+			}
+		delete[] registros;
 
-	}else{
-		registros = new Item[N];
-		preencheVetor(registros, N, seed);
 	}
-
 
 	/* 
 	descomentar para analisar vetor nao ordenado:
@@ -91,33 +131,7 @@ int main(int argc, const char** argv) {
 	std::cout << std::endl;
 	*/
 
-	switch (versaoQs){
-	case 1:
-		recQuickSort(registros,N);
-		printItemKey(registros, N);
-		break;
-	case 2:
-		erroAssert(numeroMedianas>0,"Ao utilizar a versao de medianas do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -k!");
-		medQuickSort(registros,N,numeroMedianas);
-		printItemKey(registros, N);
-		break;
-	case 3:
-		erroAssert(numeroParticoes>0,"Ao utilizar a versao de selecao do quicksort, voce deve fornecer um numero de medianas maior que 0 com a flag -m!");
-		selQuickSort(registros,N,numeroParticoes);
-		printItemKey(registros, N);
-		break;
-	case 4:
-		pileQuickSort(registros, N);
-		printItemKey(registros, N);
-		break;
-	case 5:
-		//TODO: QS EMPILHA INTELIGENTE
-		Heapsort(registros, N);
-		//heap vai de 1-N
-		printHeapItemKey(registros, N+1);
-		break;	
-	}
-
+	
 
 
 

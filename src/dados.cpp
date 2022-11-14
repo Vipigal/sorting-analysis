@@ -48,3 +48,74 @@ void preencheVetorHeap(Item* v, int N, int seed){
 
 	}
 }
+
+void printaCusto(){
+	std::cout << "comparacoes: " <<comparacoes<< std::endl;
+	std::cout << "copias: " <<copias<< std::endl;
+	comparacoes=0;
+	copias=0;
+}
+
+Pilha::Pilha(){
+	tamanho=0;
+	topo=nullptr;
+}
+
+int Pilha::getTamanho() const {
+	return tamanho;
+}
+bool Pilha::vazia() const{
+	return !tamanho;
+}
+
+void Pilha::empilha(Item item){
+	No *nova;
+	nova = new No();
+	nova->chave = item;
+	nova->prox = topo;
+	topo = nova;
+	tamanho++;
+}
+
+void Pilha::empilhaInt(int n){
+	No *nova;
+	nova = new No();
+	nova->chaveInteira = n;
+	nova->prox = topo;
+	topo = nova;
+	tamanho++;
+}
+
+Item Pilha::desempilha(){
+	Item aux; No *p;
+	if(tamanho == 0)
+		throw "A pilha está vazia!";
+	aux = topo->chave;
+	p = topo;
+	topo = topo->prox;
+	delete p;
+	tamanho--;
+	return aux;
+}
+
+int Pilha::desempilhaInt(){
+	int aux; No *p;
+	if(tamanho == 0)
+		throw "A pilha está vazia!";
+	aux = topo->chaveInteira;
+	p = topo;
+	topo = topo->prox;
+	delete p;
+	tamanho--;
+	return aux;
+}
+
+void Pilha::limpa(){
+	while(!vazia())
+		desempilha();
+}
+
+Pilha::~Pilha(){
+	limpa();
+}
+

@@ -32,10 +32,10 @@ void Ordena(int Esq, int Dir, Item *A){
 
 void recQuickSort(Item *A, int n){
 	Ordena(0, n-1, A);
-	std::cout << "comparacoes: " <<comparacoes<< std::endl;
-	std::cout << "copias: " <<copias<< std::endl;
-	comparacoes=0;
-	copias=0;
+	// std::cout << "comparacoes: " <<comparacoes<< std::endl;
+	// std::cout << "copias: " <<copias<< std::endl;
+	// comparacoes=0;
+	// copias=0;
 }
 
 

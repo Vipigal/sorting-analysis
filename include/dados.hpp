@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#define Troca(A, B){Item C; C=A; A=B; B=C;}
+
 extern int comparacoes;
 extern int copias;
 
@@ -24,6 +26,37 @@ struct Item{
 void preencheVetor(Item* v, int N, int seed);
 void preencheVetorHeap(Item* v, int N, int seed);
 std::string geraString(int size);
+void printaCusto();
+
+struct No{
+	Item chave;
+	int chaveInteira;
+	No* prox;
+};
+
+class Pilha{
+	public:
+		Pilha();
+
+		int getTamanho() const;
+		bool vazia() const;
+
+		void empilha(Item item);
+		void empilhaInt(int n);
+		Item desempilha();
+		int desempilhaInt();
+
+		void limpa();
+
+
+
+		~Pilha();
+	private:
+		No* topo;
+		int tamanho;
+};
+
+
 
 
 #endif

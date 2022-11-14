@@ -6,31 +6,26 @@ void Refaz(int Esq, int Dir, Item *A){
 	i = Esq;
 	j = i * 2;
 	x = A[i];
+	copias++;
 	while (j <= Dir){
-		if (j < Dir)
+		if (j < Dir){
 			if (A[j].chave < A[j + 1].chave)
 				j++;
-		if (x.chave >= A[j].chave)
+			comparacoes++;
+		}
+		if (x.chave >= A[j].chave){
+			comparacoes++;
 			break;
+		} comparacoes++;
 		A[i] = A[j];
+		copias++;
 		i = j;
 		j = i * 2;
 	}
 	A[i] = x;
+	copias++;
 }
 
-Item RetiraMax(Item *A, int n){
-	Item Maximo;
-	if (n < 1)
-		throw "Erro: heap vazio";
-	else{
-		Maximo = A[1];
-		A[1] = A[n];
-		n--;
-		Refaz(1, n, A);
-	}
-	return Maximo;
-}
 
 void Constroi(Item *A, int n){
 	int Esq;
@@ -53,7 +48,9 @@ void Heapsort(Item *A, int n){
 		x = A[1];
 		A[1] = A[Dir];
 		A[Dir] = x;
+		copias+=3;
 		Dir--;
 		Refaz(Esq, Dir, A);
 	}
+	printaCusto();
 }
