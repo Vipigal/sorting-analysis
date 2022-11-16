@@ -1,30 +1,60 @@
-Versao 1: Registros: 1000 Comparacoes: 12506 Copias: 7989 Tempo: 2ms
-Versao 1: Registros: 1000 Comparacoes: 12330 Copias: 8187 Tempo: 2ms
-Versao 1: Registros: 1000 Comparacoes: 13399 Copias: 8013 Tempo: 2ms
-Versao 1: Registros: 1000 Comparacoes: 13708 Copias: 7917 Tempo: 2ms
-Versao 1: Registros: 1000 Comparacoes: 12265 Copias: 8208 Tempo: 2ms
-Versao 1: Registros: 5000 Comparacoes: 86875 Copias: 48021 Tempo: 14ms
-Versao 1: Registros: 5000 Comparacoes: 82438 Copias: 48096 Tempo: 14ms
-Versao 1: Registros: 5000 Comparacoes: 83097 Copias: 48231 Tempo: 15ms
-Versao 1: Registros: 5000 Comparacoes: 76591 Copias: 48603 Tempo: 14ms
-Versao 1: Registros: 5000 Comparacoes: 79239 Copias: 48675 Tempo: 15ms
-Versao 1: Registros: 10000 Comparacoes: 167359 Copias: 104823 Tempo: 31ms
-Versao 1: Registros: 10000 Comparacoes: 177977 Copias: 103620 Tempo: 31ms
-Versao 1: Registros: 10000 Comparacoes: 185924 Copias: 101802 Tempo: 30ms
-Versao 1: Registros: 10000 Comparacoes: 180105 Copias: 102990 Tempo: 31ms
-Versao 1: Registros: 10000 Comparacoes: 176001 Copias: 104739 Tempo: 32ms
-Versao 2: Registros: 1000 k: 3 Comparacoes: 7610 Copias: 12834 Tempo: 2ms
-Versao 2: Registros: 1000 k: 3 Comparacoes: 7806 Copias: 12585 Tempo: 3ms
-Versao 2: Registros: 1000 k: 3 Comparacoes: 7933 Copias: 12728 Tempo: 2ms
-Versao 2: Registros: 1000 k: 3 Comparacoes: 7558 Copias: 12765 Tempo: 2ms
-Versao 2: Registros: 1000 k: 3 Comparacoes: 7388 Copias: 12693 Tempo: 2ms
-Versao 2: Registros: 5000 k: 3 Comparacoes: 46347 Copias: 71835 Tempo: 19ms
-Versao 2: Registros: 5000 k: 3 Comparacoes: 45975 Copias: 72013 Tempo: 18ms
-Versao 2: Registros: 5000 k: 3 Comparacoes: 49146 Copias: 71748 Tempo: 17ms
-Versao 2: Registros: 5000 k: 3 Comparacoes: 47679 Copias: 71644 Tempo: 17ms
-Versao 2: Registros: 5000 k: 3 Comparacoes: 47588 Copias: 71462 Tempo: 17ms
-Versao 2: Registros: 10000 k: 3 Comparacoes: 103432 Copias: 150145 Tempo: 39ms
-Versao 2: Registros: 10000 k: 3 Comparacoes: 101962 Copias: 150369 Tempo: 38ms
-Versao 2: Registros: 10000 k: 3 Comparacoes: 106494 Copias: 150553 Tempo: 37ms
-Versao 2: Registros: 10000 k: 3 Comparacoes: 97884 Copias: 151507 Tempo: 39ms
-Versao 2: Registros: 10000 k: 3 Comparacoes: 106347 Copias: 150313 Tempo: 39ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7408 Copias: 12722 Tempo: 3ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7157 Copias: 12729 Tempo: 3ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7397 Copias: 12693 Tempo: 2ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7844 Copias: 12823 Tempo: 3ms
+Versao 2: Registros: 1000 k: 3 Comparacoes: 7034 Copias: 12835 Tempo: 2ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 44343 Copias: 72343 Tempo: 17ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 47639 Copias: 71736 Tempo: 17ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 53072 Copias: 71556 Tempo: 18ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 47241 Copias: 71737 Tempo: 17ms
+Versao 2: Registros: 5000 k: 3 Comparacoes: 46812 Copias: 71734 Tempo: 17ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 101918 Copias: 150701 Tempo: 38ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 98434 Copias: 151610 Tempo: 41ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 107486 Copias: 150644 Tempo: 38ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 103206 Copias: 150164 Tempo: 36ms
+Versao 2: Registros: 10000 k: 3 Comparacoes: 96937 Copias: 151560 Tempo: 35ms
+Versao 2: Registros: 50000 k: 3 Comparacoes: 569298 Copias: 841121 Tempo: 226ms
+Versao 2: Registros: 50000 k: 3 Comparacoes: 602380 Copias: 835415 Tempo: 227ms
+Versao 2: Registros: 50000 k: 3 Comparacoes: 561495 Copias: 839935 Tempo: 227ms
+Versao 2: Registros: 50000 k: 3 Comparacoes: 643801 Copias: 828920 Tempo: 224ms
+Versao 2: Registros: 50000 k: 3 Comparacoes: 586694 Copias: 837959 Tempo: 226ms
+Versao 2: Registros: 100000 k: 3 Comparacoes: 1215107 Copias: 1751913 Tempo: 479ms
+Versao 2: Registros: 100000 k: 3 Comparacoes: 1227291 Copias: 1750364 Tempo: 485ms
+Versao 2: Registros: 100000 k: 3 Comparacoes: 1234240 Copias: 1748733 Tempo: 481ms
+Versao 2: Registros: 100000 k: 3 Comparacoes: 1254923 Copias: 1744524 Tempo: 484ms
+Versao 2: Registros: 100000 k: 3 Comparacoes: 1218931 Copias: 1752542 Tempo: 482ms
+Versao 2: Registros: 500000 k: 3 Comparacoes: 6924366 Copias: 9588098 Tempo: 2799ms
+Versao 2: Registros: 500000 k: 3 Comparacoes: 7045579 Copias: 9578530 Tempo: 2816ms
+Versao 2: Registros: 500000 k: 3 Comparacoes: 6951445 Copias: 9592946 Tempo: 2814ms
+Versao 2: Registros: 500000 k: 3 Comparacoes: 7399194 Copias: 9498272 Tempo: 2804ms
+Versao 2: Registros: 500000 k: 3 Comparacoes: 7044263 Copias: 9561401 Tempo: 2830ms
+Versao 2: Registros: 1000 k: 5 Comparacoes: 8533 Copias: 15319 Tempo: 3ms
+Versao 2: Registros: 1000 k: 5 Comparacoes: 8197 Copias: 15666 Tempo: 3ms
+Versao 2: Registros: 1000 k: 5 Comparacoes: 8139 Copias: 15580 Tempo: 3ms
+Versao 2: Registros: 1000 k: 5 Comparacoes: 8799 Copias: 15304 Tempo: 3ms
+Versao 2: Registros: 1000 k: 5 Comparacoes: 7974 Copias: 15646 Tempo: 3ms
+Versao 2: Registros: 5000 k: 5 Comparacoes: 48476 Copias: 85628 Tempo: 21ms
+Versao 2: Registros: 5000 k: 5 Comparacoes: 49253 Copias: 85599 Tempo: 20ms
+Versao 2: Registros: 5000 k: 5 Comparacoes: 51344 Copias: 85856 Tempo: 20ms
+Versao 2: Registros: 5000 k: 5 Comparacoes: 48917 Copias: 85714 Tempo: 20ms
+Versao 2: Registros: 5000 k: 5 Comparacoes: 48603 Copias: 85919 Tempo: 21ms
+Versao 2: Registros: 10000 k: 5 Comparacoes: 104962 Copias: 179100 Tempo: 45ms
+Versao 2: Registros: 10000 k: 5 Comparacoes: 103869 Copias: 178685 Tempo: 45ms
+Versao 2: Registros: 10000 k: 5 Comparacoes: 109692 Copias: 178089 Tempo: 44ms
+Versao 2: Registros: 10000 k: 5 Comparacoes: 108006 Copias: 178045 Tempo: 46ms
+Versao 2: Registros: 10000 k: 5 Comparacoes: 103527 Copias: 178462 Tempo: 52ms
+Versao 2: Registros: 50000 k: 5 Comparacoes: 588520 Copias: 979686 Tempo: 269ms
+Versao 2: Registros: 50000 k: 5 Comparacoes: 600859 Copias: 976073 Tempo: 270ms
+Versao 2: Registros: 50000 k: 5 Comparacoes: 598631 Copias: 976823 Tempo: 267ms
+Versao 2: Registros: 50000 k: 5 Comparacoes: 619001 Copias: 973028 Tempo: 285ms
+Versao 2: Registros: 50000 k: 5 Comparacoes: 605991 Copias: 976554 Tempo: 271ms
+Versao 2: Registros: 100000 k: 5 Comparacoes: 1268778 Copias: 2027946 Tempo: 595ms
+Versao 2: Registros: 100000 k: 5 Comparacoes: 1280305 Copias: 2025598 Tempo: 588ms
+Versao 2: Registros: 100000 k: 5 Comparacoes: 1278635 Copias: 2023284 Tempo: 580ms
+Versao 2: Registros: 100000 k: 5 Comparacoes: 1259471 Copias: 2028674 Tempo: 569ms
+Versao 2: Registros: 100000 k: 5 Comparacoes: 1264718 Copias: 2028707 Tempo: 572ms
+Versao 2: Registros: 500000 k: 5 Comparacoes: 7191985 Copias: 10960087 Tempo: 3255ms
+Versao 2: Registros: 500000 k: 5 Comparacoes: 6923336 Copias: 11005852 Tempo: 3316ms
+Versao 2: Registros: 500000 k: 5 Comparacoes: 6890776 Copias: 11006394 Tempo: 5020ms
+Versao 2: Registros: 500000 k: 5 Comparacoes: 6969487 Copias: 10992386 Tempo: 4038ms
+Versao 2: Registros: 500000 k: 5 Comparacoes: 7083056 Copias: 10977747 Tempo: 3485ms

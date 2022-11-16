@@ -150,10 +150,10 @@ int main(int argc, const char **argv){
 				selQuickSort(registros, tamanhoRegistro, numeroParticoes);
 				break;
 			case 4:
-				pileQuickSort(registros, tamanhoRegistro);
+				iterativeQsort(registros, tamanhoRegistro);
 				break;
 			case 5:
-				iterativeQsort(registros, tamanhoRegistro);
+				pileQuickSort(registros, tamanhoRegistro);
 				break;
 			case 6:
 				heapSort(registros, tamanhoRegistro);
