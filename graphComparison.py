@@ -9,15 +9,9 @@ def tiraMedia(dic):
 	for key in dic:
 		dic[key]/=5
 		
-			
-
+		
 
 f = open("saida20.txt","r")
-#word[1]= 1: ou 2: ... = numero versao
-#word[3] = N registros
-#word[5] = N comparacoes
-#word[7] = N copias
-#word[9] = tempo em ms
 
 numeroRegistros=0
 mediaComparacoes1=dict.fromkeys([1000,5000,10000,50000,100000,500000],0)
@@ -70,7 +64,8 @@ for line in data:
 	elif versao == "5:":
 		registros=int(word[3])
 		comparacoes=int(word[5])
-		mediaComparacoes5[registros]+=comparacoes		
+		mediaComparacoes5[registros]+=comparacoes	
+
 
 tiraMedia(mediaComparacoes1)
 tiraMedia(mediaComparacoes2_3)
@@ -81,6 +76,7 @@ tiraMedia(mediaComparacoes3_10)
 tiraMedia(mediaComparacoes4)
 tiraMedia(mediaComparacoes5)
 
+
 y1=list(mediaComparacoes1.values())
 y2_3=list(mediaComparacoes2_3.values())
 y2_5=list(mediaComparacoes2_5.values())
@@ -89,18 +85,19 @@ y3_100=list(mediaComparacoes3_100.values())
 y3_10=list(mediaComparacoes3_10.values())
 y4=list(mediaComparacoes4.values())
 y5=list(mediaComparacoes5.values())
-print(y2_5)
 print(y2_3)
+print(y2_5)
 print(y2_7)
 
 
-# plt.plot(X,y1,label="recursivo")
-plt.plot(X,y2_3,label="mediana k=3")
-plt.plot(X,y2_5,label="mediana k=5")
-plt.plot(X,y2_7,label="mediana k=7")
-# plt.plot(X,y3_100,label="selecao")
-# plt.plot(X,y4,label="iterativo")
-# plt.plot(X,y5,label="inteligente")
+plt.plot(X,y1,label="recursivo",linestyle="dashed",linewidth= 1,color="brown")
+plt.plot(X,y2_3,label="mediana k=3",color="green")
+plt.plot(X,y2_5,label="mediana k=5",color="yellow")
+plt.plot(X,y2_7,label="mediana k=7",color="red")
+plt.plot(X,y3_100,label="selecao m=100")
+plt.plot(X,y3_10,label="selecao m=10",linestyle="dashed",linewidth= 1.5, color="gray")
+plt.plot(X,y4,label="iterativo")
+plt.plot(X,y5,label="iterativo inteligente",linestyle="dashed",linewidth= 1.75,color="black")
 
 # fig = plt.figure()
 
@@ -118,4 +115,4 @@ plt.ylabel("y - Media de comparacoes")
 
 plt.legend()
 
-plt.savefig("medianas.png")
+plt.savefig("comparacoes.png")

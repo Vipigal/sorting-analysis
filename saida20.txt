@@ -182,7 +182,7 @@ Versao 4: Registros: 1000 Comparacoes: 11973 Copias: 9255 Tempo: 3ms
 Versao 4: Registros: 1000 Comparacoes: 12581 Copias: 9240 Tempo: 3ms
 Versao 4: Registros: 1000 Comparacoes: 12137 Copias: 9306 Tempo: 3ms
 Versao 4: Registros: 1000 Comparacoes: 12809 Copias: 9273 Tempo: 3ms
-Versao 5: Registros: 1000 Comparacoes: 13231 Copias: 9009 Tempo: 3ms
+Versao 4: Registros: 1000 Comparacoes: 13231 Copias: 9009 Tempo: 3ms
 Versao 4: Registros: 5000 Comparacoes: 84987 Copias: 53859 Tempo: 23ms
 Versao 4: Registros: 5000 Comparacoes: 81855 Copias: 54039 Tempo: 23ms
 Versao 4: Registros: 5000 Comparacoes: 78389 Copias: 54417 Tempo: 26ms
