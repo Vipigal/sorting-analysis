@@ -59,6 +59,8 @@ void merge(Item* A, int Esq, int meio, int Dir) {
         j++;
         k++;
     }
+	delete[] L;
+	delete[] M;
 }
 
 void mergeSort(Item *A, int Esq, int Dir){
