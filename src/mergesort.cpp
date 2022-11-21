@@ -31,7 +31,6 @@ void merge(Item* A, int Esq, int meio, int Dir) {
     // elements L and M and place them in the correct position at A[p..r]
     while (i < n1 && j < n2) {
         if (L[i].chave <= M[j].chave) {
-			
             A[k] = L[i];
 			copias++;
             i++;
