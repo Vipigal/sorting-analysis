@@ -39,7 +39,6 @@ X=[1000,5000,10000,50000,100000,500000]
 for line in data:
 	word=line.split(" ")
 	versao=word[1]
-	print(word)
 	if versao=="1:":
 		registros=int(word[3])
 		copias=int(word[7])
@@ -92,34 +91,40 @@ y3_100=list(mediaCopias3_100.values())
 y3_10=list(mediaCopias3_10.values())
 y4=list(mediaCopias4.values())
 y5=list(mediaCopias5.values())
+print(y1)
 print(y2_3)
 print(y2_5)
 print(y2_7)
+print(y3_10)
+print(y3_100)
+print(y4)
+print(y5)
 
 
-plt.plot(X,y1,label="recursivo",linestyle="dashed",linewidth= 1,color="brown")
-plt.plot(X,y2_3,label="mediana k=3",color="green")
-plt.plot(X,y2_5,label="mediana k=5",color="yellow")
-plt.plot(X,y2_7,label="mediana k=7",color="red")
-plt.plot(X,y3_100,label="selecao m=100")
-plt.plot(X,y3_10,label="selecao m=10",linestyle="dashed",linewidth= 1.5, color="gray")
-plt.plot(X,y4,label="iterativo")
-plt.plot(X,y5,label="iterativo inteligente",linestyle="dashed",linewidth= 1.75,color="black")
 
-# fig = plt.figure()
+# plt.plot(X,y1,label="recursivo",linestyle="dashed",linewidth= 1,color="brown")
+# plt.plot(X,y2_3,label="mediana k=3",color="green")
+# plt.plot(X,y2_5,label="mediana k=5",color="yellow")
+# plt.plot(X,y2_7,label="mediana k=7",color="red")
+# plt.plot(X,y3_100,label="selecao m=100")
+# plt.plot(X,y3_10,label="selecao m=10",linestyle="dashed",linewidth= 1.5, color="gray")
+# plt.plot(X,y4,label="iterativo")
+# plt.plot(X,y5,label="iterativo inteligente",linestyle="dashed",linewidth= 1.75,color="black")
 
-# x=np.arange(len(X))
+# # fig = plt.figure()
 
-# w=0.35
+# # x=np.arange(len(X))
 
-# plt.bar(x - w/2,y2_3,label="mediana k=3",width=w)
-# plt.bar(x + w/2,y2_5,label="mediana k=5",width=w)
+# # w=0.35
 
-
-plt.xlabel("x - Numero de registros")
-plt.ylabel("y - Media de copias")
+# # plt.bar(x - w/2,y2_3,label="mediana k=3",width=w)
+# # plt.bar(x + w/2,y2_5,label="mediana k=5",width=w)
 
 
-plt.legend()
+# plt.xlabel("x - Numero de registros")
+# plt.ylabel("y - Media de copias")
 
-plt.savefig("copias.png")
+
+# plt.legend()
+
+# plt.savefig("copias.png")

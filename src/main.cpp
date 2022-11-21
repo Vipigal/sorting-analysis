@@ -45,7 +45,6 @@ void printarDesempenhoNaSaida(std::ofstream &output, int versao, int registros, 
 			   << "Copias: " << copias
 			   << " Tempo: " << tempo << "ms" << std::endl;
 		break;
-
 	default:
 		output << "Versao " << versao << ": "
 			   << "Registros: " << registros << " "
@@ -158,10 +157,11 @@ int main(int argc, const char **argv){
 			case 6:
 				heapSort(registros, tamanhoRegistro);
 				// heap vai de 1-N
-				printHeapItemKey(registros, tamanhoRegistro + 1);
+				//printHeapItemKey(registros, tamanhoRegistro + 1);
 				break;
 			case 7:
 				mergeSort(registros, 0, tamanhoRegistro - 1);
+				break;
 			}
 
 			auto end = std::chrono::steady_clock::now();

@@ -52,5 +52,5 @@ void heapSort(Item *A, int n){
 		Dir--;
 		Refaz(Esq, Dir, A);
 	}
-	printaCusto();
+	//printaCusto();
 }
